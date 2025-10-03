@@ -1,26 +1,193 @@
-/*sample*/
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enrollment Form</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudEntry – Student Information (v2)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <h1>Student Enrollment Form</h1>
-  <form>
-    <label>Full Name:</label>
-    <input type="text" name="fullname" required>
+  <div class="page-grid">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="brand">
+          <div class="brand-mark">
+            <img src="STUDENTRY.png" alt="StudEntry" class="brand-img brand-img" />
+          </div>
+        </div>
 
-    <label>Email:</label>
-    <input type="email" name="email" required>
+        <nav class="steps">
+          <div class="step is-active">
+            <div class="bullet">1</div>
+            <div class="label">Student Information</div>
+            <div class="rail"></div>
+          </div>
+          <div class="step">
+            <div class="bullet">2</div>
+            <div class="label">Academic Information</div>
+            <div class="rail"></div>
+          </div>
+          <div class="step">
+            <div class="bullet">3</div>
+            <div class="label">Parent/Guardian Information</div>
+            <div class="rail"></div>
+          </div>
+          <div class="step">
+            <div class="bullet">4</div>
+            <div class="label">Enrollment Details</div>
+          </div>
+        </nav>
+      </div>
+    </aside>
 
-    <label>Course / Program:</label>
-    <input type="text" name="course" required>
+    <main class="content">
+      <section class="card notched">
+        <header class="card-header">
+          <div class="title-wrap">
+            <img src="info-icon.png" alt="" class="info-icon" />
+            <h1 class="card-title">Student Information</h1>
+          </div>
+          <img src="Group18.png" alt="decor" class="group18" />
+        </header>
 
-    <button type="submit">Submit</button>
-  </form>
+        <form class="form" id="studentFormV2" novalidate>
+          <div class="row two-cols">
+            <div class="field fullname">
+              <label>Full Name</label>
+              <input id="fullName" name="fullName" type="text" required>
+            </div>
+            <div class="field studentid">
+              <label>Student ID</label>
+              <input id="studentId" name="studentId" type="text" required>
+            </div>
+          </div>
+          <div class="row three-cols">
+            <div class="field dob">
+              <label>Date of birth</label>
+              <input id="dob" name="dob" type="date" required>
+            </div>
+            <div class="field contact">
+              <label>Contact Number</label>
+              <input id="contact" name="contact" type="text" required>
+            </div>
+            <div class="field gender">
+              <label>Gender</label>
+              <input id="gender" name="gender" type="text" required>
+            </div>
+          </div>
+          <div class="row address-email">
+            <div class="field address">
+              <label>Home Address</label>
+              <input id="address" name="address" type="text" required>
+            </div>
+            <div class="field email">
+              <label>Email</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+          </div>
+          <div class="row lrn-nationality">
+            <div class="field lrn">
+              <label>Learners Reference Number (LRN)</label>
+              <input id="lrn" name="lrn" type="text" required>
+            </div>
+            <div class="field nationality">
+              <label>Nationality</label>
+              <select id="nationality" name="nationality" required>
+                <option value="">Select Nationality</option>
+                <option value="filipino">Filipino</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+            </form>
+          <div class="actions">
+          <button type="button" class="next" id="nextBtn" style="background: none; border: none; padding: 0; position: absolute; bottom: 5px; right: 1px; width: 195px; height: 70px; z-index: 3; cursor: pointer;">
+  <img src="next.png" alt="Next" style="width: 100%; height: 100%; display: block; border-radius: 22px 18px 18px 22px / 22px 18px 18px 22px;">
+</button>
+        </div>
+        
+      </section>
+    </main>
+  </div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const nextBtn = document.querySelector('.next');
+  const form = document.getElementById('studentFormV2');
+  const dob = document.getElementById('dob');
+
+  // ✅ Prevent selecting future dates in the date picker
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  dob.max = `${yyyy}-${mm}-${dd}`;
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const requiredFields = form.querySelectorAll('input[required], select[required]');
+      let allValid = true;
+      let firstInvalid = null;
+
+      // ✅ Check all required fields
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          allValid = false;
+          if (!firstInvalid) firstInvalid = field;
+        }
+      });
+
+      if (!allValid) {
+        alert('⚠️ Please fill out all required fields before proceeding.');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      // ✅ Validate email
+      const emailField = document.getElementById('email');
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailField.value)) {
+        alert('⚠️ Please enter a valid email address.');
+        emailField.focus();
+        return;
+      }
+
+      // ✅ Validate date (cannot be in the future)
+      const enteredDate = new Date(dob.value);
+      const now = new Date();
+      now.setHours(0, 0, 0, 0);
+
+      if (enteredDate > now) {
+        alert('⚠️ Date of birth cannot be in the future.');
+        dob.focus();
+        return;
+      }
+
+      
+      alert('✅ Proceeding to Academic Information...');
+      window.location.href = 'academic-information.html';
+    });
+  }
+
+  
+  dob.addEventListener('change', () => {
+    const enteredDate = new Date(dob.value);
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+
+    if (enteredDate > now) {
+      alert('⚠️ Date of birth cannot be in the future.');
+      dob.value = ''; 
+    }
+  });
+});
+</script>
+
 </body>
 </html>
