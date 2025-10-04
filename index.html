@@ -1,26 +1,155 @@
-/*sample*/
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enrollment Form</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Student Enrollment Form</h1>
-  <form>
-    <label>Full Name:</label>
-    <input type="text" name="fullname" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Parent/Guardian Form</title>
+    <style>
+      body {
+        font-family: "SF Pro", Arial, sans-serif; 
+      }
 
-    <label>Email:</label>
-    <input type="email" name="email" required>
+      .rect-input,
+      .rect-textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+        font-family: inherit;
+      }
 
-    <label>Course / Program:</label>
-    <input type="text" name="course" required>
+      .clickable {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="guardian-information">
+      <img class="group-20" src="images/Group 20.png" />
+      <img class="rectangle-13" src="images/Rectangle 13.png" />
 
-    <button type="submit">Submit</button>
-  </form>
-</body>
+      <div class="group-49">
+        <div class="group-48">
+          <img class="rectangle-47" src="rectangle-470.svg" />
+          <div class="group-8">
+            <div class="next">Next</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line-4"></div>
+      <div class="academic-information">Academic Information</div>
+      <div class="enrollment-details">Enrollment Details</div>
+      <div class="student-information">Student Information</div>
+      <div class="ellipse-8"></div>
+      <div class="line-9"></div>
+      <div class="ellipse-9"></div>
+      <div class="line-10"></div>
+      <div class="parent-guardian-information">Parent/Guardian Information</div>
+      <div class="ellipse-10"></div>
+      <div class="_3">3</div>
+      <div class="ellipse-11"></div>
+      <div class="_4">4</div>
+      <img class="group-17" src="images/Group 17.png" />
+      <div class="line-8"></div>
+      <img class="group-52" src="images/Group 52.png" />
+      
+      <img class="group-50 clickable" src="images/Group 50.png" alt="Next Button" />
+
+      <div class="group-522">
+        <div class="ellipse-12"></div>
+        <img class="vector" src="images/Vector.png" />
+        <div class="parent-guardian-information2">Parent/Guardian Information</div>
+      </div>
+
+      <div class="rectangle-21">
+        <input
+          type="text"
+          class="rect-input"
+          placeholder="Enter parent/guardian full name"
+          name="parent_fullname"
+        />
+      </div>
+
+      <div class="rectangle-23">
+        <input
+          type="text"
+          class="rect-input"
+          placeholder="Enter contact number"
+          name="contact"
+        />
+      </div>
+
+      <div class="rectangle-25">
+        <input
+          type="tel"
+          class="rect-input"
+          placeholder="Enter contact number"
+          name="contact_number"
+        />
+      </div>
+
+      <div class="rectangle-26">
+        <input
+          type="tel"
+          class="rect-input"
+          placeholder="Enter home address"
+          name="home-address"
+        />
+      </div>
+
+      <div class="rectangle-27">
+        <input
+          type="email"
+          class="rect-input"
+          placeholder="Enter email address"
+          name="email"
+        />
+      </div>
+
+      <div class="rectangle-19">
+        <textarea
+          class="rect-textarea"
+          placeholder="Enter relationship"
+          name="relationship"
+        ></textarea>
+      </div>
+
+      <div class="contact-number">Contact Number</div>
+      <div class="emergency-contact-number">Emergency Contact Number</div>
+      <div class="email">Email</div>
+      <div class="home-address">Home Address</div>
+      <div class="parent-guardian-full-name">Parent/Guardian Full Name</div>
+      <div class="relationship-to-student">Relationship to student</div>
+
+      <img class="ep-back clickable" src="images/ep_back.png" alt="Back Button" />
+
+      <img
+        class="black-modern-online-school-logo-2"
+        src="images/Black Modern Online School Logo 2.png"
+      />
+      <div class="mingcute-check-fill">
+        <img class="group" src="images/mingcute_check-fill.png" />
+      </div>
+      <div class="mingcute-check-fill2">
+        <img class="group2" src="images/mingcute_check-fill.png" />
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".ep-back").addEventListener("click", function () {
+        alert("Going back to previous page...");
+        window.history.back(); 
+      });
+
+      document.querySelector(".group-50").addEventListener("click", function () {
+        alert("Going to next step...");
+        window.location.href = "nextpage.html"; 
+      });
+    </script>
+  </body>
 </html>
