@@ -1,26 +1,48 @@
-/*sample*/
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enrollment Form</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrollment Confirmation</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Student Enrollment Form</h1>
-  <form>
-    <label>Full Name:</label>
-    <input type="text" name="fullname" required>
+  <div class="container">
+    <div class="rectangle-57"></div>
 
-    <label>Email:</label>
-    <input type="email" name="email" required>
+    <div class="ellipse-container">
+      <div class="ellipse-16"></div>
+      <img class="ellipse-17" src="images/Check.png" alt="Check Icon" />
+    </div>
 
-    <label>Course / Program:</label>
-    <input type="text" name="course" required>
+    <h1 class="enrollment-successful">Enrollment Successful!</h1>
+    <p class="thank-you-text">
+      Thank you for completing your enrollment. Below are your details for confirmation:
+    </p>
 
-    <button type="submit">Submit</button>
-  </form>
+    <div class="rectangle-58">
+      <h2 class="enrollment-details">Enrollment Details</h2>
+      <div class="details">
+        <div class="label">Student Name:</div>
+        <div class="value">Nina Issabela Olasiman</div>
+
+        <div class="label">Student ID:</div>
+        <div class="value">123456</div>
+
+        <div class="label">Course & Year:</div>
+        <div class="value">BSIT - 3rd Year</div>
+
+        <div class="label">Enrollment Date:</div>
+        <div class="value">September 30, 2025</div>
+
+        <div class="label">Status:</div>
+        <div class="value status-green">Confirmed</div>
+      </div>
+
+      <img class="background-logo" src="images/Black Modern Online School Logo.png" alt="Logo" />
+    </div>
+
+    <button class="dashboard-btn">Go to Dashboard</button>
+  </div>
 </body>
 </html>
