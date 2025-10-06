@@ -1,594 +1,63 @@
-*{
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  border: none;
-  text-decoration: none;
-  background: none;
-  -webkit-font-smoothing: antialiased;
 }
-menu,
-ol,
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.guardian-information,
-.guardian-information * {
-  box-sizing: border-box;
-}
-.guardian-information {
-  height: 620px;
+.container {
+  background: white;
+  width: 1000px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
   position: relative;
-  overflow: hidden;
-  background: none; 
 }
-.guardian-information::before {
-  content: '';
-  background: url('images/background.png') center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.2; 
+
+.rectangle-57 {
+  background: #10367d;
+  height: 100px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1; 
 }
-.rect-input,
-      .rect-textarea {
-        width: 100%;
-        height: 100%;
-        min-height: 40px;           
-        box-sizing: border-box;
-        padding: 10px;
-        border: none;
-        background: transparent;    
-        font-size: 14px;
-        outline: none;
-        color: #000;
-        font-family: SF-Pro;
-        opacity: 0.7;
-      }
 
-      .rect-textarea {
-        resize: none;
-      }
+.ellipse-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
-      .rect-input::placeholder,
-      .rect-textarea::placeholder {
-        color: rgba(0, 0, 0, 0.45);
-      }
-      .rectangle-21,
-      .rectangle-23,
-      .rectangle-25,
-      .rectangle-26,
-      .rectangle-27,
-      .rectangle-19 {
-        cursor: text;
-      }
-.group-20 {
+.ellipse-16 {
+  background: #d7e7f8;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.ellipse-17 {
   position: absolute;
-  width: 890px;
-  left: 420px;
   top: 25px;
-  overflow: visible;
-  height: 580px;
+  width: 70px;
+  height: 70px;
 }
-.rectangle-13 {
-  border-radius: 0px;
-  width: 360px;
-  height: 580px;
-  position: absolute;
-  left: 40px;
-  top: 25px;
-  overflow: visible;
-}
-.group-50 {
-  position: absolute;
-  width: 155px;
-  height: 56px;
-  left: 1148px;
-  top: 545px;
-}
-.group-49 {
-  width: 202px;
-  height: 94px;
-  position: static;
-}
-.group-48 {
-  width: 202px;
-  height: 94px;
-  position: static;
-}
-.rectangle-47 {
-  border-radius: 0px;
-  width: 202px;
-  height: 94px;
-  position: absolute;
-  left: 1482px;
-  top: 979px;
-  overflow: visible;
-}
-.group-8 {
-  width: 80px;
-  height: 40px;
-  position: static;
-}
-.next {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Heavy", sans-serif;
+
+.enrollment-successful {
+  color: #10367d;
   font-size: 32px;
-  font-weight: 400;
-  position: absolute;
-  left: 1543px;
-  top: 1006px;
-  width: 80px;
-  height: 40px;
+  margin-top: 30px;
 }
-.line-4 {
-  margin-top: -5px;
-  border-style: solid;
-  border-color: rgba(16, 54, 125, 0.56);
-  border-width: 3.5px 0 0 0;
-  width: 53px;
-  position: absolute;
-  left: 118px;
-  top: 245px;
-  transform-origin: 0 0;
-  transform: rotate(89.695deg) scale(1, 1);
-}
-.academic-information {
-  color: rgba(16, 54, 125, 0.65);
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 13.5px;
-  font-weight: 500;
-  position: absolute;
-  left: 139px;
-  top: 304px;
-}
-.enrollment-details {
-  color: #596987;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 13.5px;
-  font-weight: 500;
-  position: absolute;
-  left: 139px;
-  top: 485px;
-}
-.student-information {
-  color: rgba(16, 54, 125, 0.65);
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 13.5px;
-  font-weight: 500;
-  position: absolute;
-  left: 139px;
-  top: 214px;
-}
-.ellipse-8 {
-  background: rgba(16, 54, 125, 0.56);
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 105px;
-  top: 210px;
-}
-.line-9 {
-  margin-top: -5px;
-  border-style: solid;
-  border-color: rgba(16, 54, 125, 0.56);
-  border-width: 3.5px 0 0 0;
-  width: 53px;
-  position: absolute;
-  left: 118px;
-  top: 336px;
-  transform-origin: 0 0;
-  transform: rotate(89.695deg) scale(1, 1);
-}
-.ellipse-9 {
-  background: rgba(16, 54, 125, 0.56);
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 105px;
-  top: 300px;
-}
-.line-10 {
-  margin-top: -5px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 4px 0 0 0;
-  width: 53px;
-  height: 0px;
-  position: absolute;
-  left: 119px;
-  top: 426px;
-  transform-origin: 0 0;
-  transform: rotate(89.695deg) scale(1, 1);
-}
-.group-59 {
-  position: absolute;
-  inset: 0;
-}
-.parent-guardian-information {
+
+.thank-you-text {
   color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 13.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 139px;
-  top: 394px;
-}
-.ellipse-10 {
-  background: #10367d;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 105px;
-  top: 390px;
-}
-._3 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 13.5px;
-  font-weight: 450;
-  position: absolute;
-  left: 113px;
-  top: 395px;
-}
-.ellipse-11 {
-  background: #ffffff;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 106px;
-  top: 480px;
-}
-._4 {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 13.5px;
-  font-weight: 600;
-  position: absolute;
-  left: 114px;
-  top: 485px;
-}
-.group-17 {
-  height: 64px;
-  width: 886px;
-  position: absolute;
-  left: 422px;
-  top: 25px;
-}
-.line-8 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 1px 0 0 0;
-  width: 700px;
-  height: 0px;
-  position: absolute;
-  left: 500px;
-  top: 490px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transform-origin: 0 0;
-  transform: rotate(-0.106deg) scale(1, 1);
-}
-.group-52 {
-  position: absolute;
-  width: 67px;
-  height: 58px;
-  left: 1195px;
-  top: 28px;
-  overflow: visible;
-}
-.group-53 {
-  position: absolute;
-  inset: 0;
-}
-.group-522 {
-  width: 487px;
-  height: 56px;
-  position: static;
-}
-.ellipse-12 {
-  background: #adc4db;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: 500px;
-  top: 37px;
-}
-.parent-guardian-information2 {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  position: absolute;
-  left: 550px;
-  top: 45px;
-}
-.vector {
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  left: 510px;
-  top: 45px;
-  overflow: visible;
-}
-.rectangle-21 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 1px;
-  width: 350px;
-  height: 40px;
-  position: absolute;
-  left: 500px;
-  top: 212px;
-}
-.rectangle-23 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 1px;
-  width: 215px;
-  height: 40px;
-  position: absolute;
-  left: 500px;
-  top: 303px;
-}
-.rectangle-25 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 1px;
-  width: 215px;
-  height: 40px;
-  position: absolute;
-  left: 500px;
-  top: 395px;
-}
-.rectangle-26 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 1px;
-  width: 300px;
-  height: 40px;
-  position: absolute;
-  left: 800px;
-  top: 303px;
-}
-.rectangle-27 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 1px;
-  width: 300px;
-  height: 40px;
-  position: absolute;
-  left: 800px;
-  top: 395px;
-}
-.rectangle-19 {
-  background: #ffffff;
-  border-radius: 5px;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 1px;
-  width: 240px;
-  height: 40px;
-  position: absolute;
-  left: 950px;
-  top: 212px;
-}
-.contact-number {
-  color: #10367d;
-  text-align: left;
-  font-family: "KonkhmerSleokchher-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.8;
-  position: absolute;
-  left: 500px;
-  top: 280px;
-  width: 329px;
-}
-.emergency-contact-number {
-  color: #10367d;
-  text-align: left;
-  font-family: "KonkhmerSleokchher-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.8;
-  position: absolute;
-  left: 500px;
-  top: 370px;
-  width: 397px;
-}
-.email {
-  color: #10367d;
-  text-align: left;
-  font-family: "KonkhmerSleokchher-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.8;
-  position: absolute;
-  left: 800px;
-  top: 370px;
-  width: 329px;
-}
-.home-address {
-  color: #10367d;
-  text-align: left;
-  font-family: "KonkhmerSleokchher-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.8;
-  position: absolute;
-  left: 800px;
-  top: 280px;
-  width: 329px;
-}
-.parent-guardian-full-name {
-  color: #10367d;
-  text-align: left;
-  font-family: "KonkhmerSleokchher-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.8;
-  position: absolute;
-  left: 500px;
-  top: 190px;
-}
-.relationship-to-student {
-  color: #10367d;
-  text-align: center;
-  font-family: "KonkhmerSleokchher-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0.8;
-  position: absolute;
-  left: 880px;
-  top: 190px;
-  width: 296px;
-  height: 40px;
-}
-.enter-parent-guardian-full-name {
-  color: #8b8e94;
-  text-align: left;
-  font-family: "SfPro-Light", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0.4;
-  position: absolute;
-  left: 510px;
-  top: 225px;
-}
-.enter-relationship {
-  color: #8b8e94;
-  text-align: left;
-  font-family: "SfPro-Light", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0.4;
-  position: absolute;
-  left: 960px;
-  top: 225px;
-}
-.enter-contact-number {
-  color: #8b8e94;
-  text-align: left;
-  font-family: "SfPro-Light", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0.4;
-  position: absolute;
-  left: 510px;
-  top: 315px;
-}
-.enter-contact-number2 {
-  color: #8b8e94;
-  text-align: left;
-  font-family: "SfPro-Light", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0.4;
-  position: absolute;
-  left: 510px;
-  top: 405px;
-}
-.enter-email-address {
-  color: #8b8e94;
-  text-align: left;
-  font-family: "SfPro-Light", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0.4;
-  position: absolute;
-  left: 810px;
-  top: 405px;
-}
-.enter-home-address {
-  color: #8b8e94;
-  text-align: left;
-  font-family: "SfPro-Light", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0.4;
-  position: absolute;
-  left: 810px;
-  top: 315px;
-}
-.ep-back {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 500px;
-  top: 130px;
-  overflow: visible;
-  aspect-ratio: 1;
-}
-.black-modern-online-school-logo-2 {
-  width: 180px;
-  height: 180px;
-  position: absolute;
-  left: 126px;
-  top: 35px;
-  aspect-ratio: 1;
-}
-.mingcute-check-fill {
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  left: 110px;
-  top: 383px;
-  aspect-ratio: 1;
-}
-.group {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  left: 0px;
-  top: -168px;
-  overflow: visible;
-}
-.mingcute-check-fill2 {
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  left: 112px;
-  top: 550px;
-  aspect-ratio: 1;
-}
-.group2 {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  left: -2px;
-  top: -245px;
-  overflow: visible;
+  font-size: 18px;
+  margin: 10px 0 30px;
 }
 /* Figma Styles of your File */
 :root {
@@ -599,7 +68,67 @@ ul {
     rgba(16, 54, 125, 0.2) 100%
   );
 
-  /* Fonts */
-  /* Effects */
+.rectangle-58 {
+  border: 2px solid #10367d;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+}
+
+.enrollment-details {
+  color: #10367d;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+}
+
+.label {
+  color: #10367d;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.value {
+  color: #10367d;
+  font-size: 18px;
+  text-align: right;
+}
+
+.status-green {
+  color: green;
+  font-weight: bold;
+}
+
+.background-logo {
+  position: absolute;
+  opacity: 0.3;
+  height: 300px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dashboard-btn {
+  background: #10367d;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 40px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  background: #0a2d65;
 }
 /* Figma Color Variables of your File */
