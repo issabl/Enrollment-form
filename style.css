@@ -127,8 +127,8 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 400;
+  font-size: 1.4vw;
+  font-weight: bold;
   position: absolute;
   left: 27vw;
   top: 20vh;
@@ -139,8 +139,8 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 400;
+  font-size: 1.4vw;
+  font-weight: bold;
   position: absolute;
   left: 65vw;
   top: 20vh;
@@ -151,8 +151,8 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 400;
+  font-size: 1.4vw;
+  font-weight: bold;
   position: absolute;
   left: 65vw;
   top: 30vh;
@@ -163,8 +163,8 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 400;
+  font-size: 1.4vw;
+  font-weight: bold;
   position: absolute;
   left: 27vw;
   top: 30vh;
@@ -175,8 +175,8 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 400;
+  font-size: 1.4vw;
+  font-weight: bold;
   position: absolute;
   left: 27vw;
   top: 40vh;
@@ -187,8 +187,8 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 400;
+  font-size: 1.4vw;
+  font-weight: bold;
   position: absolute;
   left: 65vw;
   top: 40vh;
@@ -199,7 +199,7 @@
   color: #000000;
   text-align: left;
   font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 500;
   position: absolute;
   left: 27vw;
@@ -211,7 +211,7 @@
   color: #2e5302;
   text-align: left;
   font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 500;
   position: absolute;
   left: 65vw;
@@ -223,7 +223,7 @@
   color: #000000;
   text-align: left;
   font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 500;
   position: absolute;
   left: 27vw;
@@ -235,7 +235,7 @@
   color: #000000;
   text-align: left;
   font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 500;
   position: absolute;
   left: 65vw;
@@ -247,7 +247,7 @@
   color: #000000;
   text-align: left;
   font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 500;
   position: absolute;
   left: 65vw;
@@ -259,7 +259,7 @@
   color: #000000;
   text-align: left;
   font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 500;
   position: absolute;
   left: 27vw;
@@ -386,7 +386,7 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Semibold", sans-serif;
-  font-size: 2.2vw;
+  font-size: 2vw;
   font-weight: 600;
   position: absolute;
   left: 11vw;
@@ -398,7 +398,7 @@
   color: #10367d;
   text-align: left;
   font-family: "SfPro-Semibold", sans-serif;
-  font-size: 2.2vw;
+  font-size: 2vw;
   font-weight: 600;
   position: absolute;
   left: 55vw;
@@ -425,7 +425,7 @@
   font-size: 1.5vw;
   font-weight: 500;
   position: absolute;
-  left: 10vw;
+  left: 11vw;
   top: 72vh;
   z-index: 3;
 }
@@ -437,7 +437,7 @@
   font-size: 1.5vw;
   font-weight: 500;
   position: absolute;
-  left: 10vw;
+  left: 11vw;
   top: 79vh;
   z-index: 3;
 }
@@ -449,7 +449,7 @@
   font-size: 1.5vw;
   font-weight: 500;
   position: absolute;
-  left: 10vw;
+  left: 11vw;
   top: 87vh;
   z-index: 3;
 }
@@ -918,17 +918,6 @@
   z-index: 3;
 }
 
-.gee-fe {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 400;
-  position: absolute;
-  left: 48vw;
-  top: 64.5vh;
-  z-index: 3;
-}
 
 .functional-english2 {
   color: #10367d;
