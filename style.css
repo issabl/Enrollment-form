@@ -1,1045 +1,134 @@
-.student-dashboard,
-.student-dashboard * {
-  box-sizing: border-box;
-}
-
-.student-dashboard {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(16, 54, 125, 0.2) 100%
-  );
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background-color: #f0f0f0;
-  z-index: 0;
-  padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+.container {
+  background: white;
+  width: 1000px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
 }
 
-.student-dashboard::before {
-  content: '';
+.rectangle-57 {
+  background: #10367d;
+  height: 100px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('C:\\Users\\PC\\Enrollment-form\\image\\background.png') repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2;
-  z-index: -1;
 }
 
-.black-modern-online-school-logo-1 {
-  opacity: 0.06;
-  width: 65vw;
-  height: auto;
-  position: absolute;
-  left: 17.5vw;
-  top: 3vh;
-  object-fit: cover;
-  aspect-ratio: 1;
-  z-index: 1;
+.ellipse-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-.rectangle-62 {
-  border-radius: 3vw;
-  border-style: solid;
-  border-color: #10367d;
-  border-width: 0.25vw;
-  width: 15vw;
-  height: 35vh;
-  position: absolute;
-  left: 5vw;
-  top: 18vh;
-  box-shadow: inset 0 0.3vw 0.35vw 0.3vw rgba(0, 0, 0, 0.25),
-    0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  object-fit: cover;
-  z-index: 2;
-}
-
-.rectangle-62 img {
-  border-radius: 2.8vw;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ellipse-18 {
-  cursor: pointer;
-  background: #e5e5e5;
+.ellipse-16 {
+  background: #d7e7f8;
   border-radius: 50%;
-  width: 3vw;
-  height: 3vw;
-  position: absolute;
-  left: 16vw;
-  top: 19vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  width: 120px;
+  height: 120px;
 }
 
-.ic-baseline-edit {
-  width: 2.5vw;
-  height: 2.5vw;
+.ellipse-17 {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  overflow: visible;
-  aspect-ratio: 1;
-  z-index: 11;
+  top: 25px;
+  width: 70px;
+  height: 70px;
 }
 
-.rectangle-64 {
-  background: #ffffff;
-  border-radius: 3vw;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.2vw;
-  opacity: 0.46;
-  width: 70vw;
-  height: 35vh;
-  position: absolute;
-  left: 25vw;
-  top: 18vh;
-  box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(0.3vw);
-  z-index: 2;
-}
-
-.group-68 {
-  position: absolute;
-  inset: 0;
-}
-
-.name {
+.enrollment-successful {
   color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.4vw;
-  font-weight: bold;
-  position: absolute;
-  left: 27vw;
-  top: 20vh;
-  z-index: 3;
+  font-size: 32px;
+  margin-top: 30px;
 }
 
-.enrollment-status {
+.thank-you-text {
   color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.4vw;
-  font-weight: bold;
-  position: absolute;
-  left: 65vw;
-  top: 20vh;
-  z-index: 3;
+  font-size: 18px;
+  margin: 10px 0 30px;
 }
-
-.academic-year {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.4vw;
-  font-weight: bold;
-  position: absolute;
-  left: 65vw;
-  top: 30vh;
-  z-index: 3;
-}
-
-.year-level {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.4vw;
-  font-weight: bold;
-  position: absolute;
-  left: 27vw;
-  top: 30vh;
-  z-index: 3;
-}
-
-.program {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.4vw;
-  font-weight: bold;
-  position: absolute;
-  left: 27vw;
-  top: 40vh;
-  z-index: 3;
-}
-
-.semester {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Regular", sans-serif;
-  font-size: 1.4vw;
-  font-weight: bold;
-  position: absolute;
-  left: 65vw;
-  top: 40vh;
-  z-index: 3;
-}
-
-.nina-issabela-s-olasiman {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 500;
-  position: absolute;
-  left: 27vw;
-  top: 25vh;
-  z-index: 3;
-}
-
-.confirmed {
-  color: #2e5302;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 500;
-  position: absolute;
-  left: 65vw;
-  top: 25vh;
-  z-index: 3;
-}
-
-._3rd-year {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 500;
-  position: absolute;
-  left: 27vw;
-  top: 35vh;
-  z-index: 3;
-}
-
-._2025-2026 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 500;
-  position: absolute;
-  left: 65vw;
-  top: 35vh;
-  z-index: 3;
-}
-
-._1st-semester {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 500;
-  position: absolute;
-  left: 65vw;
-  top: 45vh;
-  z-index: 3;
-}
-
-.bachelor-of-figma-major-in-pinterest-user {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 500;
-  position: absolute;
-  left: 27vw;
-  top: 45vh;
-  width: 40vw;
-  z-index: 3;
-}
-
-.rectangle-65 {
-  background: #ffffff;
-  border-radius: 2.5vw;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.2vw;
-  opacity: 0.4;
-  width: 30vw;
-  height: 39vh;
-  position: absolute;
-  left: 5vw;
-  top: 57vh;
-  box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(0.2vw);
-  z-index: 2;
-}
-
-.rectangle-67 {
-  background: #ffffff;
-  border-radius: 2.5vw;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.2vw;
-  opacity: 0.4;
-  width: 50vw;
-  height: 39vh;
-  position: absolute;
-  left: 40vw;
-  top: 57vh;
-  box-shadow: inset 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(0.2vw);
-  z-index: 2;
-}
-
-.rectangle-68 {
-  background: #10367d;
-  border-radius: 2.5vw;
-  width: 90vw;
-  height: 12vh;
-  position: absolute;
-  left: 5vw;
-  top: 3vh;
-  box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
-
-.working-and-studying-at-desktop-computer {
-  width: 20vw;
-  height: auto;
-  max-height: 20vh;
-  position: absolute;
-  left: 75vw;
-  top: -1.5vh;
-  box-shadow: none;
-  object-fit: contain;
-  z-index: 3;
-}
-
-.ni-a-issabela-s-olasiman-722180 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 2.2vw;
-  font-weight: 500;
-  position: absolute;
-  left: 7vw;
-  top: 9vh;
-  width: 45vw;
-  height: 3vh;
-  z-index: 3;
-}
-
-.hello {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Roboto-SemiBold", sans-serif;
-  font-size: 1.6vw;
-  font-weight: 600;
-  position: absolute;
-  left: 7vw;
-  top: 5vh;
-  width: 7vw;
-  height: 3vh;
-  z-index: 3;
-}
-
-.tuesday {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 2vw;
-  font-weight: 500;
-  position: absolute;
-  left: 65vw;
-  top: 10vh;
-  width: 10vw;
-  height: 3vh;
-  z-index: 3;
-}
-
-._1-00-pm {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 2.8vw;
-  font-weight: 600;
-  position: absolute;
-  left: 65vw;
-  top: 5vh;
-  width: 14vw;
-  height: 4vh;
-  z-index: 3;
-}
-
-.schedules {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 2vw;
-  font-weight: 600;
-  position: absolute;
-  left: 11vw;
-  top: 57.8vh;
-  z-index: 3;
-}
-
-.enrolled-courses {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 2vw;
-  font-weight: 600;
-  position: absolute;
-  left: 55vw;
-  top: 57.8vh;
-  z-index: 3;
-}
-
-.introduction-to-human-computer {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 11vw;
-  top: 62vh;
-  z-index: 3;
-}
-
-.networking-2 {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 11vw;
-  top: 72vh;
-  z-index: 3;
-}
-
-.networking-22 {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 11vw;
-  top: 79vh;
-  z-index: 3;
-}
-
-.functional-english {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 11vw;
-  top: 87vh;
-  z-index: 3;
-}
-
-._02 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 2.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 6vw;
-  top: 62vh;
-  z-index: 3;
-}
-
-._03 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 2.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 6vw;
-  top: 70vh;
-  z-index: 3;
-}
-
-._04 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 2.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 6vw;
-  top: 78vh;
-  z-index: 3;
-}
-
-._05 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 2.5vw;
-  font-weight: 500;
-  position: absolute;
-  left: 6vw;
-  top: 85.8vh;
-  z-index: 3;
-}
-
-.oct-2025 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 600;
-  position: absolute;
-  left: 6vw;
-  top: 67vh;
-  z-index: 3;
-}
-
-.oct-20252 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 600;
-  position: absolute;
-  left: 6vw;
-  top: 76vh;
-  z-index: 3;
-}
-
-.oct-20253 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 600;
-  position: absolute;
-  left: 6vw;
-  top: 83vh;
-  z-index: 3;
-}
-
-.oct-20254 {
-  color: #000000;
-  text-align: left;
-  font-family: "SfPro-Semibold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 600;
-  position: absolute;
-  left: 6vw;
-  top: 91.5vh;
-  z-index: 3;
-}
-
-.line-12 {
-  margin-top: -0.3vw;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.3vw 0 0 0;
-  width: 3.5vw;
-  height: 0;
-  position: absolute;
-  left: 10vw;
-  top: 63vh;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-  z-index: 3;
-}
-
-.line-13 {
-  margin-top: -0.3vw;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.3vw 0 0 0;
-  width: 3.5vw;
-  height: 0;
-  position: absolute;
-  left: 10vw;
-  top: 71vh;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-  z-index: 3;
-}
-
-.line-14 {
-  margin-top: -0.3vw;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.3vw 0 0 0;
-  width: 3.5vw;
-  height: 0;
-  position: absolute;
-  left: 10vw;
-  top: 79vh;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-  z-index: 3;
-}
-
-.line-15 {
-  margin-top: -0.3vw;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.3vw 0 0 0;
-  width: 3.5vw;
-  height: 0;
-  position: absolute;
-  left: 10vw;
-  top: 87vh;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-  z-index: 3;
-}
-
-.rectangle-69 {
-  background: #10367d;
-  border-radius: 0.8vw;
-  width: 6vw;
-  height: 2vh;
-  position: absolute;
-  left: 27vw;
-  top: 63.9vh;
-  z-index: 3;
-}
-
-.rectangle-81 {
-  background: #0656aa;
-  border-radius: 0.8vw;
-  width: 4vw;
-  height: 2vh;
-  position: absolute;
-  left: 11vw;
-  top: 68.8vh;
-  z-index: 3;
-}
-
-.rectangle-83 {
-  background: #0656aa;
-  border-radius: 0.8vw;
-  width: 4vw;
-  height: 2vh;
-  position: absolute;
-  left: 11vw;
-  top: 82vh;
-  z-index: 3;
-}
-
-.rectangle-84 {
-  background: #0656aa;
-  border-radius: 0.8vw;
-  width: 4vw;
-  height: 2vh;
-  position: absolute;
-  left: 11vw;
-  top: 90vh;
-  z-index: 3;
-}
-
-.rectangle-82 {
-  background: #0656aa;
-  border-radius: 0.8vw;
-  width: 4vw;
-  height: 2vh;
-  position: absolute;
-  left: 11vw;
-  top: 75.2vh;
-  z-index: 3;
-}
-
-.rectangle-70 {
-  background: #10367d;
-  border-radius: 0.8vw;
-  width: 6vw;
-  height: 2vh;
-  position: absolute;
-  left: 27vw;
-  top: 72.9vh;
-  z-index: 3;
-}
-
-.rectangle-71 {
-  background: #10367d;
-  border-radius: 0.8vw;
-  width: 6vw;
-  height: 2vh;
-  position: absolute;
-  left: 27vw;
-  top: 80vh;
-  z-index: 3;
-}
-
-.rectangle-72 {
-  background: #10367d;
-  border-radius: 0.8vw;
-  width: 6vw;
-  height: 2vh;
-  position: absolute;
-  left: 27vw;
-  top: 88vh;
-  z-index: 3;
-}
-
-._8-00-9-00-am {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.7vw;
-  font-weight: 700;
-  position: absolute;
-  left: 27.5vw;
-  top: 63.9vh;
-  z-index: 3;
-}
-
-._9-00-10-00-am {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.7vw;
-  font-weight: 700;
-  position: absolute;
-  left: 27.5vw;
-  top: 72.9vh;
-  z-index: 3;
-}
-
-._10-00-12-00-am {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.7vw;
-  font-weight: 700;
-  position: absolute;
-  left: 27.5vw;
-  top: 80vh;
-  z-index: 3;
-}
-
-._1-00-4-00-pm {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.7vw;
-  font-weight: 700;
-  position: absolute;
-  left: 27.5vw;
-  top: 88vh;
-  z-index: 3;
-}
-
-.rectangle-78 {
-  background: #ffffff;
-  border-radius: 2vw;
-  width: 45vw;
-  height: 5vh;
-  position: absolute;
-  left: 42.5vw;
-  top: 72vh;
-  box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25),
-    inset 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
-
-.rectangle-79 {
-  background: #ffffff;
-  border-radius: 2vw;
-  width: 45vw;
-  height: 5vh;
-  position: absolute;
-  left: 42.5vw;
-  top: 80vh;
-  box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25),
-    inset 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
-
-.system-architecture {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 700;
-  position: absolute;
-  left: 56vw;
-  top: 80.5vh;
-  z-index: 3;
-}
-
-.rectangle-80 {
-  background: #ffffff;
-  border-radius: 2vw;
-  width: 45vw;
-  height: 5vh;
-  position: absolute;
-  left: 42.5vw;
-  top: 88vh;
-  box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25),
-    inset 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
-
-.rectangle-77 {
-  background: #ffffff;
-  border-radius: 2vw;
-  width: 45vw;
-  height: 5vh;
-  position: absolute;
-  left: 42.5vw;
-  top: 64vh;
-  box-shadow: 0 0.3vw 0.3vw 0 rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
-
-.group-69 {
-  width: 4vw;
-  height: 3.5vh;
-  position: static;
-}
-
-.rectangle-73 {
-  background: #10367d;
-  border-radius: 2vw;
-  width: 4vw;
-  height: 3.5vh;
-  position: absolute;
-  left: 43vw;
-  top: 64.8vh;
-  z-index: 2;
-}
-
-.tabler-book-filled {
-  width: 1.5vw;
-  height: 1.5vw;
-  position: absolute;
-  left: 44.2vw;
-  top: 64.8vh;
-  overflow: visible;
-  aspect-ratio: 1;
-  z-index: 3;
-}
-
-.group-70 {
-  position: absolute;
-  inset: 0;
-}
-
-.rectangle-75 {
-  background: #10367d;
-  border-radius: 2vw;
-  width: 4vw;
-  height: 3.5vh;
-  position: absolute;
-  left: 43vw;
-  top: 72.8vh;
-  z-index: 2;
-}
-
-.material-symbols-computer {
-  width: 1.5vw;
-  height: 1.5vw;
-  position: absolute;
-  left: 44.2vw;
-  top: 73vh;
-  overflow: visible;
-  aspect-ratio: 1;
-  z-index: 3;
-}
-
-.group-71 {
-  position: absolute;
-  inset: 0;
-}
-
-.rectangle-74 {
-  background: #10367d;
-  border-radius: 2vw;
-  width: 4vw;
-  height: 3.5vh;
-  position: absolute;
-  left: 43vw;
-  top: 80.8vh;
-  z-index: 2;
-}
-
-.icon-park-outline-system {
-  width: 1.6vw;
-  height: 1.6vw;
-  position: absolute;
-  left: 44vw;
-  top: 80.8vh;
-  overflow: visible;
-  aspect-ratio: 1;
-  z-index: 3;
-}
-
-.group-72 {
-  position: absolute;
-  inset: 0;
-}
-
-.rectangle-76 {
-  background: #10367d;
-  border-radius: 2vw;
-  width: 4vw;
-  height: 3.5vh;
-  position: absolute;
-  left: 43vw;
-  top: 88.8vh;
-  z-index: 2;
-}
-
-.eos-icons-application-outlined {
-  width: 1.5vw;
-  height: 1.5vw;
-  position: absolute;
-  left: 44vw;
-  top: 88.8vh;
-  overflow: visible;
-  aspect-ratio: 1;
-  z-index: 3;
-}
-
-
-.functional-english2 {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 700;
-  position: absolute;
-  left: 55vw;
-  top: 64.5vh;
-  z-index: 3;
-}
-
-.networking-23 {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 700;
-  position: absolute;
-  left: 58vw;
-  top: 72.5vh;
-  z-index: 3;
-}
-
-.application-development {
-  color: #10367d;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 700;
-  position: absolute;
-  left: 55vw;
-  top: 88.5vh;
-  z-index: 3;
-}
-
-.ct-lab-2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 700;
-  position: absolute;
-  left: 11.5vw;
-  top: 68.8vh;
-  z-index: 3;
-}
-
-.cl-3 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 700;
-  position: absolute;
-  left: 11.9vw;
-  top: 75.2vh;
-  z-index: 3;
-}
-
-.tba {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 700;
-  position: absolute;
-  left: 11.9vw;
-  top: 82vh;
-  z-index: 3;
-}
-
-.cas-3 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "SfPro-Bold", sans-serif;
-  font-size: 0.8vw;
-  font-weight: 700;
-  position: absolute;
-  left: 11.8vw;
-  top: 90vh;
-  z-index: 3;
-}
-
-.rectangle-90 {
-  background: #d9d9d9;
-  border-radius: 2vw;
-  width: 12vw;
-  height: 4vh;
-  position: absolute;
-  left: 80vw;
-  top: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
-
-.update-info {
-  color: #000000;
-  text-align: center;
-  font-family: "SfPro-Medium", sans-serif;
-  font-size: 1.5vw;
-  font-weight: 500;
-  position: static;
-  z-index: 4;
-}
-
+/* Figma Styles of your File */
 :root {
+  /* Colors */
   --bg: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.2) 0%,
     rgba(16, 54, 125, 0.2) 100%
   );
+
+.rectangle-58 {
+  border: 2px solid #10367d;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
 }
 
-form {
-  max-width: 25vw;
-  margin: auto;
-  padding: 1.5vw;
-  background: white;
-  border-radius: 0.6vw;
-  box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1);
+.enrollment-details {
+  color: #10367d;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+}
+
+.label {
+  color: #10367d;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.value {
+  color: #10367d;
+  font-size: 18px;
+  text-align: right;
+}
+
+.status-green {
+  color: green;
+  font-weight: bold;
+}
+
+.background-logo {
+  position: absolute;
+  opacity: 0.3;
+  height: 300px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dashboard-btn {
+  background: #10367d;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 40px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  background: #0a2d65;
+}
+/* Figma Color Variables of your File */
